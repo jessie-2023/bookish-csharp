@@ -1,0 +1,12 @@
+@using Bookish.Models;
+@model Book;
+
+@{
+    ViewData["Title"] = "Book Page";
+}
+
+<div>
+    <h2>Our book of 2023:</h2>
+    <h1>@Model.Title</h1>
+    <h3>Authored by: @Model.Author</h3>
+</div>
