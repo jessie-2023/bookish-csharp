@@ -12,14 +12,14 @@ public class BookController : Controller
     {
         _logger = logger;
     }
-    public IActionResult Index()
+    public IActionResult Index() // one action, one page
     {
         var invisibleWomen = new Book
         {
             Title = "Invisible Women",
             Author = "Caroline Criado-Perez",
         };
-        return View(invisibleWomen);
+        return View(invisibleWomen); 
     }
     
 }

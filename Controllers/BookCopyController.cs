@@ -15,6 +15,41 @@ public class BookCopyController : Controller
 
     public IActionResult Index()
     {
-        return View();
+        var invisibleWomenCopy1 = new BookCopy
+        {
+            Book = new Book
+            {
+                Title = "Invisible Women",
+                Author = "Caroline Criado-Perez",
+            },
+
+        };
+
+        var invisibleWomenCopy2 = new BookCopy
+        {
+            Book = new Book
+            {
+                Title = "Invisible Women",
+                Author = "Caroline Criado-Perez",
+            },
+
+        };
+
+        var invisibleWomen = new Book
+        {
+            Title = "Invisible Women",
+            Author = "Caroline Criado-Perez",
+            Copies = new List<BookCopy> { invisibleWomenCopy1, invisibleWomenCopy2 }
+        };
+        
+        
+
+        // var viewModel = new BookCopyViewModel
+        // {
+        //     Book = invisibleWomen,
+        //     BookCopy = copyInvisibleWomen
+        // };
+
+        return View(invisibleWomen);
     }   
 }

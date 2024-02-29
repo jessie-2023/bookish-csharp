@@ -8,4 +8,4 @@ public class BookCopy
 
     public bool HasActiveLoan  => Loans.Any(loan => loan.ActualReturnDate == null);
     public Loan? ActiveLoan  => Loans.SingleOrDefault(loan => loan.ActualReturnDate == null);
-}
+}   
